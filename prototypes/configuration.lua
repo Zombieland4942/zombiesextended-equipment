@@ -17,3 +17,9 @@ fusion_reactor_equipment = {
     { order = "f", name = "microverse-battery-mk1", width = 6, height = 6, power = "10000kW", sprite_size = 256 },
     { order = "g", name = "microverse-battery-mk2", width = 6, height = 6, power = "20000kW", sprite_size = 256 },
 }
+
+personal_shield = {
+    { order = "h", name = "energy-shield-mk3-equipment", hitpoints = 200, hitpoint_recharge = 20, energy_per_hit = 40 },
+    { order = "i", name = "energy-shield-mk4-equipment", hitpoints = 300, hitpoint_recharge = 30, energy_per_hit = 50 },
+}
+
