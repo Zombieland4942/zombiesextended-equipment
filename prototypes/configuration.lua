@@ -32,3 +32,8 @@ personal_roboport = {
     { order = "l", name = "personal-roboport-mk3-equipment", robots = 40, con_rad = 30, charging_station = 6, buffer = "60MJ", input = "6MW", charging = "2MW" },
     { order = "m", name = "personal-roboport-mk4-equipment", robots = 50, con_rad = 40, charging_station = 8, buffer = "80MJ", input = "10MW", charging = "4MW" }
 }
+
+personal_exoskeleton = {
+    { order = "n", name = "exoskeleton-equipment-mk2", movement_bonus = 0.4, energy_consumption = "300kW" },
+    { order = "o", name = "exoskeleton-equipment-mk3", movement_bonus = 0.5, energy_consumption = "500kW" }
+}
