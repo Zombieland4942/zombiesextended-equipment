@@ -37,3 +37,9 @@ personal_exoskeleton = {
     { order = "n", name = "exoskeleton-equipment-mk2", movement_bonus = 0.4, energy_consumption = "300kW" },
     { order = "o", name = "exoskeleton-equipment-mk3", movement_bonus = 0.5, energy_consumption = "500kW" }
 }
+
+personal_laser_device = {
+    { order = "p", name = "personal-laser-defense-smg", distance = 15, damage = 0.8, cooldown = 7, energy_consumption_kJ = 50 },
+    { order = "q", name = "personal-laser-defense-assault", distance = 40, damage = 2.5, cooldown = 60, energy_consumption_kJ = 80 },
+    { order = "r", name = "personal-laser-defense-sniper", distance = 70, damage = 6, cooldown = 400, energy_consumption_kJ = 400 },
+}
