@@ -27,3 +27,8 @@ personal_battery = {
     { order = "j", name = "battery-mk3-equipment", capacity = "200MJ" },
     { order = "k", name = "battery-mk4-equipment", capacity = "300MJ" },
 }
+
+personal_roboport = {
+    { order = "l", name = "personal-roboport-mk3-equipment", robots = 40, con_rad = 30, charging_station = 6, buffer = "60MJ", input = "6MW", charging = "2MW" },
+    { order = "m", name = "personal-roboport-mk4-equipment", robots = 50, con_rad = 40, charging_station = 8, buffer = "80MJ", input = "10MW", charging = "4MW" }
+}
