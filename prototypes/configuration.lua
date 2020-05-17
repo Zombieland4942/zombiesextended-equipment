@@ -23,3 +23,7 @@ personal_shield = {
     { order = "i", name = "energy-shield-mk4-equipment", hitpoints = 300, hitpoint_recharge = 30, energy_per_hit = 50 },
 }
 
+personal_battery = {
+    { order = "j", name = "battery-mk3-equipment", capacity = "200MJ" },
+    { order = "k", name = "battery-mk4-equipment", capacity = "300MJ" },
+}
