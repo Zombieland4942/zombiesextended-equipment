@@ -1,4 +1,5 @@
-require("prototypes.configuration")
+require("configuration")
+
 require("prototypes.equipment-grid")
 require("prototypes.armor")
 require("prototypes.fusion-reactor-equipment")
