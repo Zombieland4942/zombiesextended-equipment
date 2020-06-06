@@ -1,7 +1,18 @@
 
 for x,exo in pairs(personal_exoskeleton) do
+    
+    table.insert(data.raw["technology"][exo.technology].effects, { type = "unlock-recipe", recipe = exo.name })
+    
     data:extend(
         {
+            {
+                type = "recipe",
+                name = exo.name,
+                enabled = false,
+                energy_required = 5,
+                ingredients = exo.ingredients,
+                result = exo.name
+            },
             {
                 type = "item",
                 name = exo.name,

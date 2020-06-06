@@ -109,8 +109,19 @@ end
 
 
 for x,pcd in pairs(personal_cannon_device) do
+    
+    table.insert(data.raw["technology"][pcd.technology].effects, { type = "unlock-recipe", recipe = pcd.name })
+    
     data:extend(
         {
+            {
+                type = "recipe",
+                name = pcd.name,
+                enabled = false,
+                energy_required = 10,
+                ingredients = pcd.ingredients,
+                result = pcd.name
+            }, 
             {
                 type = "item",
                 name = pcd.name,

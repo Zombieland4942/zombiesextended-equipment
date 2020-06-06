@@ -6,17 +6,31 @@ local science_t5 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"
 local science_t6 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1},{"utility-science-pack",1},{"space-science-pack",1}}
 
 technologies = {
-    { order = "a-b-c", name = "power-armor-mk3", count = 600, time = 60, prerequisite = {"power-armor-mk2"}, ingredients = science_t5 },
-    { order = "a-b-c", name = "power-armor-mk4", count = 800, time = 60, prerequisite = {"power-armor-mk3"}, ingredients = science_t6 },
-    { order = "a-b-c", name = "power-armor-mk5", count = 1000, time = 60, prerequisite = {"power-armor-mk4"}, ingredients = science_t6 },
+    { order = "a-a-a", name = "power-armor-mk3", count = 600, time = 60, prerequisite = {"power-armor-mk2"}, ingredients = science_t5 },
+    { order = "a-a-b", name = "power-armor-mk4", count = 800, time = 60, prerequisite = {"power-armor-mk3"}, ingredients = science_t6 },
+    { order = "a-a-c", name = "power-armor-mk5", count = 1000, time = 60, prerequisite = {"power-armor-mk4"}, ingredients = science_t6 },
 
-    { order = "a-b-c", name = "reactor-equipment-mk2", count = 400, time = 60, prerequisite = {"fusion-reactor-equipment"}, ingredients = science_t5 },
-    { order = "a-b-c", name = "reactor-equipment-mk3", count = 600, time = 60, prerequisite = {"reactor-equipment-mk2"}, ingredients = science_t5 },
+    { order = "a-b-a", name = "reactor-equipment-mk2", count = 400, time = 60, prerequisite = {"fusion-reactor-equipment"}, ingredients = science_t5 },
+    { order = "a-b-b", name = "reactor-equipment-mk3", count = 600, time = 60, prerequisite = {"reactor-equipment-mk2"}, ingredients = science_t5 },
     { order = "a-b-c", name = "reactor-equipment-mk4", count = 800, time = 60, prerequisite = {"reactor-equipment-mk3"}, ingredients = science_t6 },
-    { order = "a-b-c", name = "reactor-equipment-mk5", count = 1000, time = 60, prerequisite = {"reactor-equipment-mk4"}, ingredients = science_t6 },
+    { order = "a-b-d", name = "reactor-equipment-mk5", count = 1000, time = 60, prerequisite = {"reactor-equipment-mk4"}, ingredients = science_t6 },
 
-    { order = "a-b-c", name = "energy-shield-mk3-equipment", count = 400, time = 60, prerequisite = {"energy-shield-mk2-equipment"}, ingredients = science_t5 },
-    { order = "a-b-c", name = "energy-shield-mk4-equipment", count = 600, time = 60, prerequisite = {"energy-shield-mk3-equipment"}, ingredients = science_t6 },
+    { order = "a-c-a", name = "energy-shield-mk3-equipment", count = 400, time = 60, prerequisite = {"energy-shield-mk2-equipment"}, ingredients = science_t5 },
+    { order = "a-c-b", name = "energy-shield-mk4-equipment", count = 600, time = 60, prerequisite = {"energy-shield-mk3-equipment"}, ingredients = science_t6 },
+
+    { order = "a-d-a", name = "battery-mk3-equipment", count = 200, time = 60, prerequisite = {"battery-mk2-equipment"}, ingredients = science_t4 },
+    { order = "a-d-b", name = "battery-mk4-equipment", count = 400, time = 60, prerequisite = {"battery-mk3-equipment"}, ingredients = science_t5 },
+
+    { order = "a-d-b", name = "personal-roboport-mk3-equipment", count = 500, time = 60, prerequisite = {"personal-roboport-mk2-equipment"}, ingredients = science_t4 },
+    { order = "a-d-b", name = "personal-roboport-mk4-equipment", count = 1000, time = 60, prerequisite = {"personal-roboport-mk3-equipment"}, ingredients = science_t5 },
+
+    { order = "a-e-a", name = "exoskeleton-equipment-mk2", count = 100, time = 60, prerequisite = {"exoskeleton-equipment"}, ingredients = science_t4 },
+    { order = "a-e-b", name = "exoskeleton-equipment-mk3", count = 200, time = 60, prerequisite = {"exoskeleton-equipment-mk2"}, ingredients = science_t5 },
+
+    { order = "a-f-a", name = "personal-laser-defense-equipment-mk2", count = 400, time = 60, prerequisite = {"personal-laser-defense-equipment"}, ingredients = science_t5 },
+
+    { order = "a-g-a", name = "personal-canon-defense-equipment-mk1", count = 500, time = 60, prerequisite = {"personal-laser-defense-equipment-mk2"}, ingredients = science_t5 },
+    { order = "a-g-b", name = "personal-canon-defense-equipment-mk2", count = 1000, time = 60, prerequisite = {"personal-canon-defense-equipment-mk1"}, ingredients = science_t6 },
 }
 
 equipment_grid = {
@@ -40,36 +54,36 @@ fusion_reactor_equipment = {
 
 personal_shield = {
     { order = "c-a", name = "energy-shield-mk3-equipment", hitpoints = 200, hitpoint_recharge = 20, energy_per_hit = 40, ingredients = { {"energy-shield-mk2-equipment", 1},{"complex-processing-unit", 2} }, technology = "energy-shield-mk3-equipment" },
-    { order = "c-b", name = "energy-shield-mk4-equipment", hitpoints = 300, hitpoint_recharge = 30, energy_per_hit = 50, ingredients = { {"energy-shield-mk3-equipment", 1},{"complex-processing-unit", 4},{"vibranium-plate", 20} }, technology = "energy-shield-mk4-equipment" },
+    { order = "c-b", name = "energy-shield-mk4-equipment", hitpoints = 400, hitpoint_recharge = 40, energy_per_hit = 80, ingredients = { {"energy-shield-mk3-equipment", 1},{"complex-processing-unit", 4},{"vibranium-plate", 10} }, technology = "energy-shield-mk4-equipment" },
 }
 
 personal_battery = {
-    { order = "d-a", name = "battery-mk3-equipment", capacity = "200MJ" },
-    { order = "d-b", name = "battery-mk4-equipment", capacity = "300MJ" },
+    { order = "d-a", name = "battery-mk3-equipment", capacity = "200MJ", ingredients = { {"battery-mk2-equipment", 1},{"complex-processing-unit", 4} }, technology = "battery-mk3-equipment" },
+    { order = "d-b", name = "battery-mk4-equipment", capacity = "400MJ", ingredients = { {"battery-mk3-equipment", 1},{"complex-processing-unit", 8},{"vibranium-plate", 10} }, technology = "battery-mk4-equipment" },
 }
 
 personal_roboport = {
-    { order = "e-a", name = "personal-roboport-mk3-equipment", robots = 40, con_rad = 30, charging_station = 6, buffer = "60MJ", input = "6MW", charging = "2MW" },
-    { order = "e-b", name = "personal-roboport-mk4-equipment", robots = 50, con_rad = 40, charging_station = 8, buffer = "80MJ", input = "10MW", charging = "4MW" }
+    { order = "e-a", name = "personal-roboport-mk3-equipment", robots = 40, con_rad = 30, charging_station = 6, buffer = "60MJ", input = "6MW", charging = "2MW", ingredients = { {"personal-roboport-mk2-equipment", 2},{"complex-processing-unit", 6} }, technology = "personal-roboport-mk3-equipment" },
+    { order = "e-b", name = "personal-roboport-mk4-equipment", robots = 50, con_rad = 40, charging_station = 8, buffer = "80MJ", input = "10MW", charging = "4MW", ingredients = { {"personal-roboport-mk3-equipment", 2},{"complex-processing-unit", 12},{"vibranium-plate", 20} }, technology = "personal-roboport-mk4-equipment" },
 }
 
 personal_exoskeleton = {
-    { order = "f-a", name = "exoskeleton-equipment-mk2", movement_bonus = 0.4, energy_consumption = "300kW" },
-    { order = "f-b", name = "exoskeleton-equipment-mk3", movement_bonus = 0.5, energy_consumption = "500kW" }
+    { order = "f-a", name = "exoskeleton-equipment-mk2", movement_bonus = 0.4, energy_consumption = "300kW", ingredients = { {"exoskeleton-equipment", 2},{"complex-processing-unit", 4} }, technology = "exoskeleton-equipment-mk2" },
+    { order = "f-b", name = "exoskeleton-equipment-mk3", movement_bonus = 0.8, energy_consumption = "600kW", ingredients = { {"exoskeleton-equipment-mk2", 2},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "exoskeleton-equipment-mk3" }
 }
 
 personal_laser_device = {
-    { order = "g-a", name = "personal-laser-defense-smg", distance = 15, damage = 0.8, cooldown = 7, energy_consumption_kJ = 50 },
-    { order = "g-b", name = "personal-laser-defense-assault", distance = 40, damage = 2.5, cooldown = 60, energy_consumption_kJ = 80 },
-    { order = "g-c", name = "personal-laser-defense-sniper", distance = 70, damage = 6, cooldown = 400, energy_consumption_kJ = 400 },
+    { order = "g-a", name = "personal-laser-defense-smg", distance = 15, damage = 0.8, cooldown = 7, energy_consumption_kJ = 50, ingredients = { {"personal-laser-defense-equipment", 2},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
+    { order = "g-b", name = "personal-laser-defense-assault", distance = 40, damage = 2.5, cooldown = 60, energy_consumption_kJ = 80, ingredients = { {"personal-laser-defense-equipment", 3},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
+    { order = "g-c", name = "personal-laser-defense-sniper", distance = 70, damage = 6, cooldown = 400, energy_consumption_kJ = 400, ingredients = { {"personal-laser-defense-equipment", 2},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
 }
 
 personal_canno_projectile = {
-    { name = "pcd-projectile-1", damage = 2000, radius = 5, acceleration = 0.05 },
-    { name = "pcd-projectile-2", damage = 20000, radius = 10, acceleration = 0.05 }
+    { name = "pcd-projectile-1", damage = 2000, radius = 10, acceleration = 0.05 },
+    { name = "pcd-projectile-2", damage = 20000, radius = 20, acceleration = 0.05 }
 }
 
 personal_cannon_device = {
-    { order = "h-a", name = "personal-cannon-defense-mk1", projectile = "pcd-projectile-1", distance = 70, cooldown = 30, energy = "1MJ" },
-    { order = "h-b", name = "personal-cannon-defense-mk2", projectile = "pcd-projectile-2", distance = 90, cooldown = 30, energy = "10MJ" }
+    { order = "h-a", name = "personal-cannon-defense-mk1", projectile = "pcd-projectile-1", distance = 70, cooldown = 30, energy = "10MJ", ingredients = { {"personal-laser-defense-equipment", 10},{"complex-processing-unit", 15},{"vibranium-plate", 40} }, technology = "personal-canon-defense-equipment-mk1" },
+    { order = "h-b", name = "personal-cannon-defense-mk2", projectile = "pcd-projectile-2", distance = 100, cooldown = 60, energy = "100MJ", ingredients = { {"personal-cannon-defense-mk1", 2},{"complex-processing-unit", 30},{"vibranium-plate", 80} }, technology = "personal-canon-defense-equipment-mk2" },
 }

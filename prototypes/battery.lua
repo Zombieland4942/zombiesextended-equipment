@@ -1,7 +1,18 @@
 
 for x,battery in pairs(personal_battery) do
+    
+    table.insert(data.raw["technology"][battery.technology].effects, { type = "unlock-recipe", recipe = battery.name })
+    
     data:extend(
-        {           
+        {       
+            {
+                type = "recipe",
+                name = battery.name,
+                enabled = false,
+                energy_required = 5,
+                ingredients = battery.ingredients,
+                result = battery.name
+            },    
             {
                 type = "item",
                 name = battery.name,

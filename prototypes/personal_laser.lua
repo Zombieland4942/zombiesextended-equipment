@@ -1,7 +1,18 @@
 
 for x,pld in pairs(personal_laser_device) do
+     
+    table.insert(data.raw["technology"][pld.technology].effects, { type = "unlock-recipe", recipe = pld.name })
+    
     data:extend(
         {
+            {
+                type = "recipe",
+                name = pld.name,
+                enabled = false,
+                energy_required = 5,
+                ingredients = pld.ingredients,
+                result = pld.name
+            },
             {
                 type = "item",
                 name = pld.name,

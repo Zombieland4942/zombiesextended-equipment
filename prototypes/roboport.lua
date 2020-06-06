@@ -1,7 +1,18 @@
 
 for x,roboport in pairs(personal_roboport) do
+    
+    table.insert(data.raw["technology"][roboport.technology].effects, { type = "unlock-recipe", recipe = roboport.name })
+    
     data:extend(
-        {
+        {   
+            {
+                type = "recipe",
+                name = roboport.name,
+                enabled = false,
+                energy_required = 5,
+                ingredients = roboport.ingredients,
+                result = roboport.name
+            },
             {
                 type = "item",
                 name = roboport.name,
