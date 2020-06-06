@@ -1,7 +1,19 @@
 
 for x,reactor in pairs(fusion_reactor_equipment) do
+
+    table.insert(data.raw["technology"][reactor.technology].effects, { type = "unlock-recipe", recipe = reactor.name })
+
     data:extend(
         {
+            {
+                type = "recipe",
+                name = reactor.name,
+                enabled = false,
+                energy_required = 3,
+                ingredients = reactor.ingredients,
+                result = reactor.name,
+                requester_paste_multiplier = 1
+            },
             {
                 type = "item",
                 name = reactor.name,
