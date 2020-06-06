@@ -9,6 +9,14 @@ technologies = {
     { order = "a-b-c", name = "power-armor-mk3", count = 600, time = 60, prerequisite = {"power-armor-mk2"}, ingredients = science_t5 },
     { order = "a-b-c", name = "power-armor-mk4", count = 800, time = 60, prerequisite = {"power-armor-mk3"}, ingredients = science_t6 },
     { order = "a-b-c", name = "power-armor-mk5", count = 1000, time = 60, prerequisite = {"power-armor-mk4"}, ingredients = science_t6 },
+
+    { order = "a-b-c", name = "reactor-equipment-mk2", count = 400, time = 60, prerequisite = {"fusion-reactor-equipment"}, ingredients = science_t5 },
+    { order = "a-b-c", name = "reactor-equipment-mk3", count = 600, time = 60, prerequisite = {"reactor-equipment-mk2"}, ingredients = science_t5 },
+    { order = "a-b-c", name = "reactor-equipment-mk4", count = 800, time = 60, prerequisite = {"reactor-equipment-mk3"}, ingredients = science_t6 },
+    { order = "a-b-c", name = "reactor-equipment-mk5", count = 1000, time = 60, prerequisite = {"reactor-equipment-mk4"}, ingredients = science_t6 },
+
+    { order = "a-b-c", name = "energy-shield-mk3-equipment", count = 400, time = 60, prerequisite = {"energy-shield-mk2-equipment"}, ingredients = science_t5 },
+    { order = "a-b-c", name = "energy-shield-mk4-equipment", count = 600, time = 60, prerequisite = {"energy-shield-mk3-equipment"}, ingredients = science_t6 },
 }
 
 equipment_grid = {
@@ -24,15 +32,15 @@ power_armor = {
 }
 
 fusion_reactor_equipment = {
-    { order = "b-a", name = "fusion-reactor-equipment-mk2", width = 4, height = 4, power = "1000kW", sprite_size = 128 },
-    { order = "b-b", name = "fusion-reactor-equipment-mk3", width = 4, height = 4, power = "5000kW", sprite_size = 128 },
-    { order = "b-c", name = "microverse-battery-mk1", width = 6, height = 6, power = "10000kW", sprite_size = 256 },
-    { order = "b-d", name = "microverse-battery-mk2", width = 6, height = 6, power = "20000kW", sprite_size = 256 },
+    { order = "b-a", name = "fusion-reactor-equipment-mk2", width = 4, height = 4, power = "1000kW", sprite_size = 128, ingredients = { {"fusion-reactor-equipment", 1},{"complex-processing-unit", 2} }, technology = "reactor-equipment-mk2" },
+    { order = "b-b", name = "fusion-reactor-equipment-mk3", width = 4, height = 4, power = "5000kW", sprite_size = 128, ingredients = { {"fusion-reactor-equipment-mk2", 5},{"complex-processing-unit", 4} }, technology = "reactor-equipment-mk3" },
+    { order = "b-c", name = "microverse-battery-mk1", width = 6, height = 6, power = "10000kW", sprite_size = 256, ingredients = { {"fusion-reactor-equipment-mk3", 2},{"complex-processing-unit", 10},{"vibranium-plate", 10} }, technology = "reactor-equipment-mk4" },
+    { order = "b-d", name = "microverse-battery-mk2", width = 6, height = 6, power = "20000kW", sprite_size = 256, ingredients = { {"microverse-battery-mk1", 2},{"complex-processing-unit", 20},{"vibranium-plate", 20} }, technology = "reactor-equipment-mk5" },
 }
 
 personal_shield = {
-    { order = "c-a", name = "energy-shield-mk3-equipment", hitpoints = 200, hitpoint_recharge = 20, energy_per_hit = 40 },
-    { order = "c-b", name = "energy-shield-mk4-equipment", hitpoints = 300, hitpoint_recharge = 30, energy_per_hit = 50 },
+    { order = "c-a", name = "energy-shield-mk3-equipment", hitpoints = 200, hitpoint_recharge = 20, energy_per_hit = 40, ingredients = { {"energy-shield-mk2-equipment", 1},{"complex-processing-unit", 2} }, technology = "energy-shield-mk3-equipment" },
+    { order = "c-b", name = "energy-shield-mk4-equipment", hitpoints = 300, hitpoint_recharge = 30, energy_per_hit = 50, ingredients = { {"energy-shield-mk3-equipment", 1},{"complex-processing-unit", 4},{"vibranium-plate", 20} }, technology = "energy-shield-mk4-equipment" },
 }
 
 personal_battery = {

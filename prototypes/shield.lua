@@ -1,7 +1,18 @@
 
 for x,shield in pairs(personal_shield) do
+    
+    table.insert(data.raw["technology"][shield.technology].effects, { type = "unlock-recipe", recipe = shield.name })
+    
     data:extend(
         {
+            {
+                type = "recipe",
+                name = shield.name,
+                enabled = false,
+                energy_required = 5,
+                ingredients = shield.ingredients,
+                result = shield.name
+            },
             {
                 type = "item",
                 name = shield.name,
