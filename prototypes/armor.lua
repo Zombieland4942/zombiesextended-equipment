@@ -1,7 +1,19 @@
 
 for x,armor in pairs(power_armor) do
+    
+    table.insert(data.raw["technology"][armor.technology].effects, { type = "unlock-recipe", recipe = armor.name })
+
     data:extend(
         {
+            {
+                type = "recipe",
+                name = armor.name,
+                enabled = false,
+                energy_required = 20,
+                ingredients = armor.ingredients,
+                result = armor.name,
+                requester_paste_multiplier = 1
+            },
             {
                 type = "armor",
                 name = armor.name,
