@@ -1,14 +1,26 @@
+local science_t1 = {{"automation-science-pack",1}}
+local science_t2 = {{"automation-science-pack",1},{"logistic-science-pack",1}}
+local science_t3 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1}}
+local science_t4 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1}}
+local science_t5 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1},{"utility-science-pack",1}}
+local science_t6 = {{"automation-science-pack",1},{"logistic-science-pack",1},{"chemical-science-pack",1},{"production-science-pack",1},{"utility-science-pack",1},{"space-science-pack",1}}
+
+technologies = {
+    { order = "a-b-c", name = "power-armor-mk3", count = 600, time = 60, prerequisite = {"power-armor-mk2"}, ingredients = science_t5 },
+    { order = "a-b-c", name = "power-armor-mk4", count = 800, time = 60, prerequisite = {"power-armor-mk3"}, ingredients = science_t6 },
+    { order = "a-b-c", name = "power-armor-mk5", count = 1000, time = 60, prerequisite = {"power-armor-mk4"}, ingredients = science_t6 },
+}
 
 equipment_grid = {
     { name = "xl-equipment-grid", width = 15, height = 15 },
-    { name = "xxl-equipment-grid", width = 25, height = 25 },
-    { name = "xxxl-equipment-grid", width = 35, height = 35 }
+    { name = "xxl-equipment-grid", width = 20, height = 20 },
+    { name = "xxxl-equipment-grid", width = 30, height = 30 }
 }
 
 power_armor = {
-    { order = "a-a", name = "power-armor-mk3", equipment_grid = "xl-equipment-grid", inventory_size_bonus = 30 },
-    { order = "a-b", name = "power-armor-mk4", equipment_grid = "xxl-equipment-grid", inventory_size_bonus = 50 },
-    { order = "a-c", name = "power-armor-mk5", equipment_grid = "xxxl-equipment-grid", inventory_size_bonus = 70 },
+    { order = "a-a", name = "power-armor-mk3", equipment_grid = "xl-equipment-grid", inventory_size_bonus = 30, ingredients = { {"power-armor-mk2", 2},{"complex-processing-unit", 4},{"vibranium-plate", 4} }, technology = "power-armor-mk3" },
+    { order = "a-b", name = "power-armor-mk4", equipment_grid = "xxl-equipment-grid", inventory_size_bonus = 50, ingredients = { {"power-armor-mk3", 1},{"complex-processing-unit", 8},{"vibranium-plate", 8} }, technology = "power-armor-mk4" },
+    { order = "a-c", name = "power-armor-mk5", equipment_grid = "xxxl-equipment-grid", inventory_size_bonus = 70, ingredients = { {"power-armor-mk4", 1},{"complex-processing-unit", 16},{"vibranium-plate", 8} }, technology = "power-armor-mk5" },
 }
 
 fusion_reactor_equipment = {

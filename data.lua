@@ -1,4 +1,5 @@
 require("configuration")
+require("prototypes.technologies")
 
 require("prototypes.equipment-grid")
 require("prototypes.armor")
