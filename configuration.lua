@@ -33,12 +33,6 @@ technologies = {
     { order = "a-g-b", name = "personal-canon-defense-equipment-mk2", count = 1000, time = 60, prerequisite = {"personal-canon-defense-equipment-mk1"}, ingredients = science_t6 },
 }
 
-equipment_grid = {
-    { name = "xl-equipment-grid", width = 15, height = 15 },
-    { name = "xxl-equipment-grid", width = 20, height = 20 },
-    { name = "xxxl-equipment-grid", width = 25, height = 25 }
-}
-
 power_armor = {
     { order = "a-a", name = "power-armor-mk3", equipment_grid = "xl-equipment-grid", inventory_size_bonus = 30, ingredients = { {"power-armor-mk2", 2},{"complex-processing-unit", 4},{"vibranium-plate", 4} }, technology = "power-armor-mk3" },
     { order = "a-b", name = "power-armor-mk4", equipment_grid = "xxl-equipment-grid", inventory_size_bonus = 50, ingredients = { {"power-armor-mk3", 1},{"complex-processing-unit", 8},{"vibranium-plate", 8} }, technology = "power-armor-mk4" },
