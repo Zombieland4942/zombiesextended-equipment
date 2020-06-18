@@ -16,7 +16,7 @@ for x,exo in pairs(personal_exoskeleton) do
             {
                 type = "item",
                 name = exo.name,
-                icon = "__darkstar-equipment__/graphics/icons/" .. exo.name .. ".png",
+                icon = "__zombiesextended-equipment__/graphics/icons/" .. exo.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = exo.name,
                 subgroup = "ds-equipment",
@@ -29,7 +29,7 @@ for x,exo in pairs(personal_exoskeleton) do
                 name = exo.name,
                 sprite =
                 {
-                    filename = "__darkstar-equipment__/graphics/equipment/" .. exo.name .. ".png",
+                    filename = "__zombiesextended-equipment__/graphics/equipment/" .. exo.name .. ".png",
                     width = 64,
                     height = 128,
                     priority = "medium"

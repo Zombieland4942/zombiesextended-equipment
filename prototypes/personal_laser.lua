@@ -16,7 +16,7 @@ for x,pld in pairs(personal_laser_device) do
             {
                 type = "item",
                 name = pld.name,
-                icon = "__darkstar-equipment__/graphics/icons/" .. pld.name .. ".png",
+                icon = "__zombiesextended-equipment__/graphics/icons/" .. pld.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = pld.name,
                 subgroup = "ds-equipment",
@@ -29,7 +29,7 @@ for x,pld in pairs(personal_laser_device) do
                 name = pld.name,
                 sprite =
                 {
-                    filename = "__darkstar-equipment__/graphics/equipment/" .. pld.name .. ".png",
+                    filename = "__zombiesextended-equipment__/graphics/equipment/" .. pld.name .. ".png",
                     width = 351,
                     height = 516,
                     priority = "medium"

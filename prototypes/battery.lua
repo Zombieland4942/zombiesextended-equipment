@@ -16,7 +16,7 @@ for x,battery in pairs(personal_battery) do
             {
                 type = "item",
                 name = battery.name,
-                icon = "__darkstar-equipment__/graphics/icons/" .. battery.name .. ".png",
+                icon = "__zombiesextended-equipment__/graphics/icons/" .. battery.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = battery.name,
                 subgroup = "ds-equipment",
@@ -29,7 +29,7 @@ for x,battery in pairs(personal_battery) do
                 name = battery.name,
                 sprite =
                 {
-                    filename = "__darkstar-equipment__/graphics/equipment/" .. battery.name .. ".png",
+                    filename = "__zombiesextended-equipment__/graphics/equipment/" .. battery.name .. ".png",
                     width = 32,
                     height = 64,
                     priority = "medium"

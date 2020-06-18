@@ -125,7 +125,7 @@ for x,pcd in pairs(personal_cannon_device) do
             {
                 type = "item",
                 name = pcd.name,
-                icon = "__darkstar-equipment__/graphics/icons/" .. pcd.name .. ".png",
+                icon = "__zombiesextended-equipment__/graphics/icons/" .. pcd.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = pcd.name,
                 subgroup = "ds-equipment",
@@ -138,7 +138,7 @@ for x,pcd in pairs(personal_cannon_device) do
                 name = pcd.name,
                 sprite =
                 {
-                    filename = "__darkstar-equipment__/graphics/equipment/" .. pcd.name .. ".png",
+                    filename = "__zombiesextended-equipment__/graphics/equipment/" .. pcd.name .. ".png",
                     width = 351,
                     height = 516,
                     priority = "medium"

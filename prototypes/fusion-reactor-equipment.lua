@@ -17,7 +17,7 @@ for x,reactor in pairs(fusion_reactor_equipment) do
             {
                 type = "item",
                 name = reactor.name,
-                icon = "__darkstar-equipment__/graphics/icons/" .. reactor.name .. ".png",
+                icon = "__zombiesextended-equipment__/graphics/icons/" .. reactor.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = reactor.name,
                 subgroup = "ds-equipment",
@@ -30,7 +30,7 @@ for x,reactor in pairs(fusion_reactor_equipment) do
                 name = reactor.name,
                 sprite =
                 {
-                    filename = "__darkstar-equipment__/graphics/equipment/" .. reactor.name .. ".png",
+                    filename = "__zombiesextended-equipment__/graphics/equipment/" .. reactor.name .. ".png",
                     width = reactor.sprite_size,
                     height = reactor.sprite_size,
                     priority = "medium"

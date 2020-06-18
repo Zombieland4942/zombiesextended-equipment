@@ -16,7 +16,7 @@ for x,roboport in pairs(personal_roboport) do
             {
                 type = "item",
                 name = roboport.name,
-                icon = "__darkstar-equipment__/graphics/icons/" .. roboport.name .. ".png",
+                icon = "__zombiesextended-equipment__/graphics/icons/" .. roboport.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = roboport.name,
                 subgroup = "ds-equipment",
@@ -30,7 +30,7 @@ for x,roboport in pairs(personal_roboport) do
                 take_result = roboport.name,
                 sprite =
                 {
-                    filename = "__darkstar-equipment__/graphics/equipment/" .. roboport.name .. ".png",
+                    filename = "__zombiesextended-equipment__/graphics/equipment/" .. roboport.name .. ".png",
                     width = 64,
                     height = 64,
                     priority = "medium"

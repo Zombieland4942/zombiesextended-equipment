@@ -17,7 +17,7 @@ for x,armor in pairs(power_armor) do
             {
                 type = "armor",
                 name = armor.name,
-                icon = "__darkstar-equipment__/graphics/icons/" .. armor.name .. ".png",
+                icon = "__zombiesextended-equipment__/graphics/icons/" .. armor.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 resistances =
                 {

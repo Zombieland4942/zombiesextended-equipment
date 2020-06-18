@@ -6,7 +6,7 @@ for x, technology in pairs(technologies) do
             type = "technology",
             name = technology.name,
             icon_size = 128,
-            icon = "__darkstar-equipment__/graphics/technology/" .. technology.name .. ".png",
+            icon = "__zombiesextended-equipment__/graphics/technology/" .. technology.name .. ".png",
             effects = { },
             unit =
             {

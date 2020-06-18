@@ -16,7 +16,7 @@ for x,shield in pairs(personal_shield) do
             {
                 type = "item",
                 name = shield.name,
-                icon = "__darkstar-equipment__/graphics/icons/" .. shield.name .. ".png",
+                icon = "__zombiesextended-equipment__/graphics/icons/" .. shield.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = shield.name,
                 subgroup = "ds-equipment",
@@ -29,7 +29,7 @@ for x,shield in pairs(personal_shield) do
                 name = shield.name,
                 sprite =
                 {
-                    filename = "__darkstar-equipment__/graphics/equipment/" .. shield.name .. ".png",
+                    filename = "__zombiesextended-equipment__/graphics/equipment/" .. shield.name .. ".png",
                     width = 64,
                     height = 64,
                     priority = "medium"
