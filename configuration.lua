@@ -36,7 +36,7 @@ technologies = {
 equipment_grid = {
     { name = "xl-equipment-grid", width = 15, height = 15 },
     { name = "xxl-equipment-grid", width = 20, height = 20 },
-    { name = "xxxl-equipment-grid", width = 30, height = 30 }
+    { name = "xxxl-equipment-grid", width = 25, height = 25 }
 }
 
 power_armor = {
