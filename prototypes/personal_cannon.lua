@@ -149,6 +149,13 @@ for x,pcd in pairs(personal_cannon_device) do
                     height = 16,
                     type = "full"
                 },
+                ability_icon =
+                {
+                    filename = "__zombiesextended-equipment__/graphics/icons/personal-cannon-defense-mk2-remote.png",
+                    flags = { "icon" },
+                    mipmap_count = 4,
+                    size = 64
+                },
                 energy_source =
                 {
                     type = "electric",
@@ -185,9 +192,41 @@ for x,pcd in pairs(personal_cannon_device) do
                         }
                     }
                 },
-                automatic = true,
+                automatic = pcd.auto,
                 categories = {"armor"}
             },
+        }
+    )
+end
+
+for x,pcd_remote in pairs(personal_cannon_device_remote) do
+    
+    table.insert(data.raw["technology"][pcd_remote.technology].effects, { type = "unlock-recipe", recipe = pcd_remote.name })
+    
+    data:extend(
+        {
+            {
+                type = "recipe",
+                name = pcd_remote.name,
+                enabled = true,
+                energy_required = 10,
+                ingredients = pcd_remote.ingredients,
+                result = pcd_remote.name
+            },
+            {
+                type = "capsule",
+                name = pcd_remote.name,
+                icon = "__zombiesextended-equipment__/graphics/icons/" ..  pcd_remote.name .. ".png",
+                icon_size = 64, icon_mipmaps = 4,
+                capsule_action =
+                {
+                    type = "equipment-remote",
+                    equipment = pcd_remote.personal_cannon_device
+                },
+                subgroup = "ds-equipment",
+                order = pcd_remote.order,
+                stack_size = 1
+            }
         }
     )
 end

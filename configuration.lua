@@ -78,6 +78,10 @@ personal_canno_projectile = {
 }
 
 personal_cannon_device = {
-    { order = "h-a", name = "personal-cannon-defense-mk1", projectile = "pcd-projectile-1", distance = 70, cooldown = 30, energy = "10MJ", ingredients = { {"personal-laser-defense-equipment", 10},{"complex-processing-unit", 15},{"vibranium-plate", 40} }, technology = "personal-canon-defense-equipment-mk1" },
-    { order = "h-b", name = "personal-cannon-defense-mk2", projectile = "pcd-projectile-2", distance = 100, cooldown = 60, energy = "100MJ", ingredients = { {"personal-cannon-defense-mk1", 2},{"complex-processing-unit", 30},{"vibranium-plate", 80} }, technology = "personal-canon-defense-equipment-mk2" },
+    { order = "h-a", name = "personal-cannon-defense-mk1", projectile = "pcd-projectile-1", auto = "true", distance = 70, cooldown = 30, energy = "10MJ", ingredients = { {"personal-laser-defense-equipment", 10},{"complex-processing-unit", 15},{"vibranium-plate", 40} }, technology = "personal-canon-defense-equipment-mk1" },
+    { order = "h-b-a", name = "personal-cannon-defense-mk2", projectile = "pcd-projectile-2", auto = "false", distance = 100, cooldown = 60, energy = "100MJ", ingredients = { {"personal-cannon-defense-mk1", 2},{"complex-processing-unit", 30},{"vibranium-plate", 80} }, technology = "personal-canon-defense-equipment-mk2" },
+}
+
+personal_cannon_device_remote = {
+    { order = "h-b-b", name = "personal-cannon-defense-mk2-remote", personal_cannon_device = "personal-cannon-defense-mk2", ingredients = { {"complex-processing-unit", 30},{"vibranium-plate", 80} }, technology = "personal-canon-defense-equipment-mk2" }
 }
