@@ -4,6 +4,7 @@ Date: 2020-11-09
   Changes:
     - Made the MK2 Personal Canon Device manual
     - Added a Remote Control for the Personal Canon Device
+    - Corrected Mistake in Personal Cannon Device Energy Consumption
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2020-11-08

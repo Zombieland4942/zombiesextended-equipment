@@ -160,7 +160,7 @@ for x,pcd in pairs(personal_cannon_device) do
                 {
                     type = "electric",
                     usage_priority = "secondary-input",
-                    buffer_capacity = "10MJ"
+                    buffer_capacity = pcd.energy
                 },
                 attack_parameters =
                 {
@@ -173,7 +173,7 @@ for x,pcd in pairs(personal_cannon_device) do
                     {
                         type = "projectile",
                         category = "electric",
-                        energy_consumption = "1MJ",
+                        energy_consumption = pcd.energy,
                         projectile = pcd.projectile,
                         speed = 1,
                         action =
