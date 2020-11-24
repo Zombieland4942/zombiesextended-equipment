@@ -54,7 +54,7 @@ for x,pld in pairs(personal_laser_device) do
                     damage_modifier = pld.damage,
                     ammo_type =
                     {
-                        category = "laser-turret",
+                        category = "laser",
                         energy_consumption = pld.energy_consumption_kJ .. "kJ",
                         action =
                         {
