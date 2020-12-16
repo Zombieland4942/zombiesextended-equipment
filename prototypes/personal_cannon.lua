@@ -145,8 +145,8 @@ for x,pcd in pairs(personal_cannon_device) do
                 },
                 shape =
                 {
-                    width = 8,
-                    height = 16,
+                    width = pcd.width,
+                    height = pcd.height,
                     type = "full"
                 },
                 ability_icon =
