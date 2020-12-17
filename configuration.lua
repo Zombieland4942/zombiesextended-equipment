@@ -57,8 +57,8 @@ personal_battery = {
 }
 
 personal_roboport = {
-    { order = "e-a", name = "personal-roboport-mk3-equipment", robots = 40, con_rad = 30, charging_station = 6, buffer = "60MJ", input = "6MW", charging = "2MW", ingredients = { {"personal-roboport-mk2-equipment", 2},{"complex-processing-unit", 6} }, technology = "personal-roboport-mk3-equipment" },
-    { order = "e-b", name = "personal-roboport-mk4-equipment", robots = 50, con_rad = 40, charging_station = 8, buffer = "80MJ", input = "10MW", charging = "4MW", ingredients = { {"personal-roboport-mk3-equipment", 2},{"complex-processing-unit", 12},{"vibranium-plate", 20} }, technology = "personal-roboport-mk4-equipment" },
+    { order = "e-a", name = "personal-roboport-mk3-equipment", robots = 40, con_rad = 30, charging_station = 6, buffer = "60MJ", input = "36MW", charging = "36MW", ingredients = { {"personal-roboport-mk2-equipment", 2},{"complex-processing-unit", 6} }, technology = "personal-roboport-mk3-equipment" },
+    { order = "e-b", name = "personal-roboport-mk4-equipment", robots = 50, con_rad = 40, charging_station = 8, buffer = "80MJ", input = "80MW", charging = "80MW", ingredients = { {"personal-roboport-mk3-equipment", 2},{"complex-processing-unit", 12},{"vibranium-plate", 20} }, technology = "personal-roboport-mk4-equipment" },
 }
 
 personal_exoskeleton = {
