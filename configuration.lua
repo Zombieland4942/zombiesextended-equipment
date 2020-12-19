@@ -83,5 +83,5 @@ personal_cannon_device = {
 }
 
 personal_cannon_device_remote = {
-    { order = "h-b-b", name = "personal-cannon-defense-mk2-remote", personal_cannon_device = "personal-cannon-defense-mk2", ingredients = { {"complex-processing-unit", 30},{"vibranium-plate", 80} }, technology = "personal-canon-defense-equipment-mk2" }
+    { order = "f", name = "personal-cannon-defense-mk2-remote", personal_cannon_device = "personal-cannon-defense-mk2", ingredients = { {"complex-processing-unit", 30},{"vibranium-plate", 80} }, technology = "personal-canon-defense-equipment-mk2" }
 }

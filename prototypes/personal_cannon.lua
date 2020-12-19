@@ -229,8 +229,8 @@ for x,pcd_remote in pairs(personal_cannon_device_remote) do
                     type = "equipment-remote",
                     equipment = pcd_remote.personal_cannon_device
                 },
-                subgroup = "ds-equipment",
-                order = pcd_remote.order,
+                subgroup = subgroup,
+                order = "c" .. pcd_remote.order,
                 stack_size = 1
             }
         }
