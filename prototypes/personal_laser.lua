@@ -1,4 +1,10 @@
 
+local subgroup = "military-equipment"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then
+  subgroup  = "ds-equipment"
+end
+
 for x,pld in pairs(personal_laser_device) do
      
     table.insert(data.raw["technology"][pld.technology].effects, { type = "unlock-recipe", recipe = pld.name })
@@ -19,8 +25,8 @@ for x,pld in pairs(personal_laser_device) do
                 icon = "__zombiesextended-equipment__/graphics/icons/" .. pld.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = pld.name,
-                subgroup = "ds-equipment",
-                order = pld.order,
+                subgroup = subgroup,
+                order = "c" .. pld.order,
                 default_request_amount = 5,
                 stack_size = 20
             },

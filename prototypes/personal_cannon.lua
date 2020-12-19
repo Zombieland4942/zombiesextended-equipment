@@ -107,6 +107,12 @@ for x,projectile in pairs(personal_canno_projectile) do
     )
 end
 
+local subgroup = "military-equipment"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then
+  subgroup  = "ds-equipment"
+end
+
 
 for x,pcd in pairs(personal_cannon_device) do
     
@@ -128,8 +134,8 @@ for x,pcd in pairs(personal_cannon_device) do
                 icon = "__zombiesextended-equipment__/graphics/icons/" .. pcd.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = pcd.name,
-                subgroup = "ds-equipment",
-                order = pcd.order,
+                subgroup = subgroup,
+                order = "c" .. pcd.order,
                 default_request_amount = 5,
                 stack_size = 20
             },

@@ -1,3 +1,8 @@
+local subgroup = "equipment"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then
+  subgroup  = "ds-equipment"
+end
 
 for x,roboport in pairs(personal_roboport) do
     
@@ -19,8 +24,8 @@ for x,roboport in pairs(personal_roboport) do
                 icon = "__zombiesextended-equipment__/graphics/icons/" .. roboport.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = roboport.name,
-                subgroup = "ds-equipment",
-                order = roboport.order,
+                subgroup = subgroup,
+                order = "e[robotics]-" .. roboport.order,
                 default_request_amount = 1,
                 stack_size = 20
             },

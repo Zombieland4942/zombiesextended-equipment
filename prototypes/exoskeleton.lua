@@ -1,3 +1,8 @@
+local subgroup = "equipment"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then
+  subgroup  = "ds-equipment"
+end
 
 for x,exo in pairs(personal_exoskeleton) do
     
@@ -19,8 +24,8 @@ for x,exo in pairs(personal_exoskeleton) do
                 icon = "__zombiesextended-equipment__/graphics/icons/" .. exo.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = exo.name,
-                subgroup = "ds-equipment",
-                order = exo.order,
+                subgroup = subgroup,
+                order = "dz-" .. exo.order,
                 default_request_amount = 5,
                 stack_size = 20
             },

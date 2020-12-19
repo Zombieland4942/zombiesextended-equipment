@@ -1,4 +1,10 @@
 
+local subgroup = "armor"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then
+  subgroup  = "ds-equipment"
+end
+
 for x,armor in pairs(power_armor) do
     
     table.insert(data.raw["technology"][armor.technology].effects, { type = "unlock-recipe", recipe = armor.name })
@@ -42,7 +48,7 @@ for x,armor in pairs(power_armor) do
                         percent = 70
                     }
                 },
-                subgroup = "ds-equipment",
+                subgroup = subgroup,
                 order = armor.order,
                 stack_size = 1,
                 infinite = true,

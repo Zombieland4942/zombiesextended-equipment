@@ -1,3 +1,8 @@
+local subgroup = "equipment"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then
+  subgroup  = "ds-equipment"
+end
 
 for x,reactor in pairs(fusion_reactor_equipment) do
 
@@ -20,8 +25,8 @@ for x,reactor in pairs(fusion_reactor_equipment) do
                 icon = "__zombiesextended-equipment__/graphics/icons/" .. reactor.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = reactor.name,
-                subgroup = "ds-equipment",
-                order = reactor.order,
+                subgroup = subgroup,
+                order = "a[energy-source]-c" .. reactor.order,
                 default_request_amount = 1,
                 stack_size = 20,
             },

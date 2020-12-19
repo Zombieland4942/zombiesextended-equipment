@@ -1,3 +1,9 @@
+local subgroup = "military-equipment"
+
+if settings.startup["zombies-use-seperate-tab"].value == true then
+  subgroup  = "ds-equipment"
+end
+
 
 for x,shield in pairs(personal_shield) do
     
@@ -19,8 +25,8 @@ for x,shield in pairs(personal_shield) do
                 icon = "__zombiesextended-equipment__/graphics/icons/" .. shield.name .. ".png",
                 icon_size = 64, icon_mipmaps = 4,
                 placed_as_equipment_result = shield.name,
-                subgroup = "ds-equipment",
-                order = shield.order,
+                subgroup = subgroup,
+                order = "a[shield]-" .. shield.order,
                 default_request_amount = 5,
                 stack_size = 20
             },
