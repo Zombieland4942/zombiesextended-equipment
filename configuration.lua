@@ -67,9 +67,10 @@ personal_exoskeleton = {
 }
 
 personal_laser_device = {
-    { order = "a", name = "personal-laser-defense-smg", distance = 15, damage = 0.8, cooldown = 7, energy_consumption_kJ = 50, ingredients = { {"personal-laser-defense-equipment", 2},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
-    { order = "b", name = "personal-laser-defense-assault", distance = 40, damage = 2.5, cooldown = 60, energy_consumption_kJ = 80, ingredients = { {"personal-laser-defense-equipment", 3},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
-    { order = "c", name = "personal-laser-defense-sniper", distance = 70, damage = 6, cooldown = 400, energy_consumption_kJ = 400, ingredients = { {"personal-laser-defense-equipment", 2},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
+  --{ order = "a", name = "default-pld",                    distance = 15, damage = 3,   cooldown = 40,  energy_consumption_kJ = 50,  ingredients = { {"personal-laser-defense-equipment", 2},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
+    { order = "a", name = "personal-laser-defense-smg",     distance = 15, damage = 1.5, cooldown = 5,   energy_consumption_kJ = 100, ingredients = { {"personal-laser-defense-equipment", 2},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
+    { order = "b", name = "personal-laser-defense-assault", distance = 30, damage = 3,   cooldown = 20,  energy_consumption_kJ = 150, ingredients = { {"personal-laser-defense-equipment", 2},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
+    { order = "c", name = "personal-laser-defense-sniper",  distance = 60, damage = 12,  cooldown = 160, energy_consumption_kJ = 200, ingredients = { {"personal-laser-defense-equipment", 2},{"complex-processing-unit", 8},{"vibranium-plate", 20} }, technology = "personal-laser-defense-equipment-mk2" },
 }
 
 personal_canno_projectile = {
