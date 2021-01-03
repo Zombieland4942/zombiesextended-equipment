@@ -15,7 +15,7 @@ for x,shield in pairs(personal_shield) do
                 type = "recipe",
                 name = shield.name,
                 enabled = false,
-                energy_required = 5,
+                energy_required = shield.craft_time,
                 ingredients = shield.ingredients,
                 result = shield.name
             },

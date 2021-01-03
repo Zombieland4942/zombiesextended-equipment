@@ -215,7 +215,7 @@ for x,pcd_remote in pairs(personal_cannon_device_remote) do
                 type = "recipe",
                 name = pcd_remote.name,
                 enabled = true,
-                energy_required = 10,
+                energy_required = pcd_remote.craft_time,
                 ingredients = pcd_remote.ingredients,
                 result = pcd_remote.name
             },

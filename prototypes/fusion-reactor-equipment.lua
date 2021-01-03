@@ -14,7 +14,7 @@ for x,reactor in pairs(fusion_reactor_equipment) do
                 type = "recipe",
                 name = reactor.name,
                 enabled = false,
-                energy_required = 3,
+                energy_required = reactor.craft_time,
                 ingredients = reactor.ingredients,
                 result = reactor.name,
                 requester_paste_multiplier = 1

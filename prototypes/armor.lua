@@ -15,7 +15,7 @@ for x,armor in pairs(power_armor) do
                 type = "recipe",
                 name = armor.name,
                 enabled = false,
-                energy_required = 20,
+                energy_required = armor.craft_time,
                 ingredients = armor.ingredients,
                 result = armor.name,
                 requester_paste_multiplier = 1

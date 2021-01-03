@@ -15,7 +15,7 @@ for x,battery in pairs(personal_battery) do
                 type = "recipe",
                 name = battery.name,
                 enabled = false,
-                energy_required = 5,
+                energy_required = battery.craft_time,
                 ingredients = battery.ingredients,
                 result = battery.name
             },    

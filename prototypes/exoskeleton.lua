@@ -14,7 +14,7 @@ for x,exo in pairs(personal_exoskeleton) do
                 type = "recipe",
                 name = exo.name,
                 enabled = false,
-                energy_required = 5,
+                energy_required = exo.craft_time,
                 ingredients = exo.ingredients,
                 result = exo.name
             },

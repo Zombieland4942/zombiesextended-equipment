@@ -15,7 +15,7 @@ for x,pld in pairs(personal_laser_device) do
                 type = "recipe",
                 name = pld.name,
                 enabled = false,
-                energy_required = 5,
+                energy_required = pld.craft_time,
                 ingredients = pld.ingredients,
                 result = pld.name
             },
